@@ -5,6 +5,8 @@ record. The site covers every podium from the completed 2022 and 2024 editions,
 the player pairings behind each individual medal, the rosters behind each
 championship squad, the all-time medal table, and the road to Paris 2026.
 
+Live site: [roundnet-worlds-archive.vercel.app](https://roundnet-worlds-archive.vercel.app)
+
 ## Local development
 
 ```bash
