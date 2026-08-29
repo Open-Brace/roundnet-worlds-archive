@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roundnet Worlds — The Podium Archive
 
-## Getting Started
+An independent, source-linked archive of the Roundnet World Championship medal
+record. The site covers every podium from the completed 2022 and 2024 editions,
+the player pairings behind each individual medal, the rosters behind each
+championship squad, the all-time medal table, and the road to Paris 2026.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The completed Worlds record is small, public, and changes only every two years,
+so it lives as reviewed TypeScript data in `src/data/worlds.ts`. A database would
+add cost and deployment complexity without improving the current experience.
+The data layer is intentionally isolated so live 2026 results can later move to
+Drizzle and Neon without rewriting the page components.
 
-## Learn More
+## Primary sources
 
-To learn more about Next.js, take a look at the following resources:
+- International Roundnet Federation event pages and format guides
+- Official Fwango-linked results and rosters summarized by Spike Wiki
+- The ROUNDNETWORK World Championship documentary
+- Everything Roundnet's pre-France-2026 medal count
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every edition page and the history page link directly to their sources.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Photography and video stills
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Photography displayed from International Roundnet Federation pages is credited
+there to Corentin Bureau, Ruwen Schroeder, and Pierre Staub. The trophy still is
+from *The Roundnet World Championship*, a ROUNDNETWORK documentary presented by
+Spikeball. Source links and credits are displayed with the images. This is an
+independent archive and is not an official IRF publication.
